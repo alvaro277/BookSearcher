@@ -24,11 +24,11 @@ const filterBooks = (string,array) => {
     }
     for(let s=0; s < filteredBooks[t].length; s++){
         if(s=0){
-            object[title] = filteredBooks[t][s];
+            object.title = filteredBooks[t][s];
         }else if (s=1) {
-            object[author] = filteredBooks[t][s];
+            object.author = filteredBooks[t][s];
         }else{
-            object[tags].push(filteredBooks[t][s]);
+            object.tags.push(filteredBooks[t][s]);
         }
         finalFilteredBooks.push(object);
     }
