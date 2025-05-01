@@ -41,6 +41,7 @@ const filterBooks = (string,array) => {
 // Empty the book list container, iterate over list of filtered books, return list of books formatted as HTML using the function in `helper.js` 
 const structureBooksAsHtml = (listOfBooks) => {
   let HTMLBooks = listOfBooks.map( book => structureBookAsHtml(book));
+  console.log(HTMLBooks);
   return HTMLBooks;
 };
 
