@@ -30,8 +30,9 @@ const filterBooks = (string,array) => {
          }else{
              object.tags.push(filteredBooks[t][s]);
          }
-         finalFilteredBooks.push(object);
+         
      }
+    finalFilteredBooks.push(object);
    }
    console.log(finalFilteredBooks);
    return finalFilteredBooks;
