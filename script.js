@@ -9,7 +9,8 @@ const captureSearchValue = () => {
 // Filter books based on search input
 const filterBooks = (string,array) => {
   let flattenedBooks = flattenObjectValuesIntoArray(books);
-  let filteredBooks = flattenedBooks.filter( book => book.includes(string))
+  console.log(flattenedBooks);
+  let filteredBooks = flattenedBooks.filter( book => book.includes(string));
   return filteredBooks;
 };
 
