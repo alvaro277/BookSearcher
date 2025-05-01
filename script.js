@@ -8,11 +8,33 @@ const captureSearchValue = () => {
 
 // Filter books based on search input
 const filterBooks = (string,array) => {
-  let flattenedBooks = flattenObjectValuesIntoArray(array);
-  console.log(flattenedBooks);
-  let filteredBooks = flattenedBooks.map( book => book.filter( b => b.includes(string)));
-  console.log(filteredBooks);
-  return filteredBooks;
+  let flattenedBooks = flattenObjectValuesIntoArray(books);
+  filteredBooks = [];
+  for (let i=0; i < flattenedBooks.length ; i++){
+    if (flattenedBooks[i].some( j => j.includes(string))){
+        filteredBooks.push(flattenedBooks[i]);
+    }
+    }
+  finalFilteredBooks = [];
+  for (let t=0; t < filteredBooks.length; t++){
+    let object = {
+        title : '',
+        author : '',
+        tags : []
+    }
+    for(let s=0; s < filteredBooks[t].length; t++){
+        if(s=0){
+            object[title] = filteredBooks[t][s];
+        }else if (s=1) {
+            object[author] = filteredBooks[t][s];
+        }else{
+            object[tags].push(filteredBooks[t][s]);
+        }
+        finalFilteredBooks.push(object);
+    }
+  }
+  console.log(finalFilteredBooks);
+  return finalFilteredBooks;
 };
 
 // Empty the book list container, iterate over list of filtered books, return list of books formatted as HTML using the function in `helper.js` 
