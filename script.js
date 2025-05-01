@@ -22,7 +22,7 @@ const filterBooks = (string,array) => {
         author : '',
         tags : []
     }
-    for(let s=0; s < filteredBooks[t].length; t++){
+    for(let s=0; s < filteredBooks[t].length; s++){
         if(s=0){
             object[title] = filteredBooks[t][s];
         }else if (s=1) {
