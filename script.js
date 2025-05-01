@@ -17,11 +17,10 @@ const filterBooks = (string,array) => {
     }
   finalFilteredBooks = [];
   for (let t=0; t < filteredBooks.length; t++){
-    let object = {
-        title : '',
-        author : '',
-        tags : []
-    }
+    let object = {};
+    object.title = '';
+    object.author = '';
+    object.tags = [];
     for(let s=0; s < filteredBooks[t].length; s++){
         if(s=0){
             object.title = filteredBooks[t][s];
