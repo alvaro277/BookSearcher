@@ -17,24 +17,25 @@ const filterBooks = (string,array) => {
     }
   console.log(filteredBooks);
   finalFilteredBooks = [];
-  for (let t=0; t < filteredBooks.length; t++){
-    let object = {};
-    object.title = '';
-    object.author = '';
-    object.tags = [];
-    for(let s=0; s < filteredBooks[t].length; s++){
-        if(s=0){
-            object.title = filteredBooks[t][s];
-        }else if (s=1) {
-            object.author = filteredBooks[t][s];
-        }else{
-            object.tags.push(filteredBooks[t][s]);
-        }
-        finalFilteredBooks.push(object);
-    }
-  }
-  console.log(finalFilteredBooks);
-  return finalFilteredBooks;
+  // for (let t=0; t < filteredBooks.length; t++){
+  //   let object = {};
+  //   object.title = '';
+  //   object.author = '';
+  //   object.tags = [];
+  //   for(let s=0; s < filteredBooks[t].length; s++){
+  //       if(s=0){
+  //           object.title = filteredBooks[t][s];
+  //       }else if (s=1) {
+  //           object.author = filteredBooks[t][s];
+  //       }else{
+  //           object.tags.push(filteredBooks[t][s]);
+  //       }
+  //       finalFilteredBooks.push(object);
+  //   }
+  // }
+  // console.log(finalFilteredBooks);
+  // return finalFilteredBooks;
+  return filteredBooks;
 };
 
 // Empty the book list container, iterate over list of filtered books, return list of books formatted as HTML using the function in `helper.js` 
