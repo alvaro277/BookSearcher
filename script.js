@@ -15,7 +15,6 @@ const filterBooks = (string,array) => {
         filteredBooks.push(flattenedBooks[i]);
     }
     }
-  console.log(filteredBooks);
   finalFilteredBooks = [];
   for (let t=0; t < filteredBooks.length; t++){
      let object = {};
@@ -33,8 +32,7 @@ const filterBooks = (string,array) => {
          
      }
     finalFilteredBooks.push(object);
-   }
-   console.log(finalFilteredBooks);
+  }
    return finalFilteredBooks;
 };
 
