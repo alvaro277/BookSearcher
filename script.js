@@ -11,6 +11,7 @@ const filterBooks = (string,array) => {
   let flattenedBooks = flattenObjectValuesIntoArray(books);
   console.log(flattenedBooks);
   let filteredBooks = flattenedBooks.filter( book => book.includes(string));
+  console.log(filteredBooks);
   return filteredBooks;
 };
 
