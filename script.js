@@ -10,7 +10,7 @@ const captureSearchValue = () => {
 const filterBooks = (string,array) => {
   let flattenedBooks = flattenObjectValuesIntoArray(books);
   console.log(flattenedBooks);
-  let filteredBooks = flattenedBooks.filter( book => book.includes(string));
+  let filteredBooks = flattenedBooks.map( book => book.filter( b => book.includes(string.toLowerCase())));
   console.log(filteredBooks);
   return filteredBooks;
 };
